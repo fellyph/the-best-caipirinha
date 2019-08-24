@@ -7,5 +7,10 @@ h5 {
 }
 
 body {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 18px;
+}
+
+.recipe__header {
+
 }
