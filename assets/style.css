@@ -1,16 +1,65 @@
+:root {
+    --primary-color: #00D1C3;
+    --secondary-color: #FCCD69;
+    --header-color: #FFFFFF;
+    --cardBg-color: #FFFFFF;
+    --bodyBg-color: #DEFAF8;
+ }
+
+ body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    background: var(--bodyBg-color);
+    padding: 0;
+    margin: 0;
+ }
+
 h1,
 h2,
 h3,
 h4,
 h5 {
-    font-family: 'Chewy', cursive;
+    font-family: 'Pacifico', cursive;
 }
 
-body {
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 18px;
-}
+/* ========== HEADER ============= */
 
 .recipe__header {
+    background: var(--primary-color);
+    color: var(--header-color);
+    padding: 1em;
+    text-align: center;
+}
 
+.recipe__subtitle {
+    font-family: 'Open Sans', sans-serif; 
+}
+
+.recipe__navigation {
+    display: none;
+}
+
+/* ========== card ============ */
+
+.recipe__card {
+    background: var(--cardBg-color); 
+    margin: 1em auto 2em;
+    width: 600px;
+    max-width: 100%;
+}
+
+.recipe__card__header {
+    background: var(--primary-color);
+    color: var(--header-color);
+    border-bottom: 10px solid var(--secondary-color);
+    padding: 0.3em;
+    text-align: center;
+}
+
+.recipe__card__title {
+    margin: 0;
+}
+
+.recipe__card__content {
+   padding: 1em;
 }
