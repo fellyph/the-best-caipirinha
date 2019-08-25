@@ -1,8 +1,8 @@
 :root {
   --primary-color: #00d1c3;
   --secondary-color: #fccd69;
-  --header-color: #ffffff;
-  --cardBg-color: #ffffff;
+  --header-color: #fff;
+  --cardBg-color: #fff;
   --bodyBg-color: #defaf8;
 }
 
@@ -108,10 +108,14 @@ h5 {
   background-image: linear-gradient(to right, #22c1c3, #fdbb2d);
 }
 
-.recipe__thumb {
-
-}
-
+.recipe__card__step img,
 .recipe__thumb img {
   max-width: 100%;
+}
+
+.recipe__card__step {
+  text-align: center;
+  margin-bottom: 1.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 5px dotted var(--bodyBg-color);
 }
