@@ -135,7 +135,7 @@ h5 {
 
 .recipe__card__step {
   text-align: center;
-  margin-bottom: 1.5em;
-  padding-bottom: 0.5em;
-  border-bottom: 5px dotted var(--bodyBg-color);
+  margin-bottom: 2.5em;
+  padding-bottom: 1em;
+  border-bottom: 5px dotted var(--secondary-color);
 }
