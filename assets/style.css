@@ -1,65 +1,109 @@
 :root {
-    --primary-color: #00D1C3;
-    --secondary-color: #FCCD69;
-    --header-color: #FFFFFF;
-    --cardBg-color: #FFFFFF;
-    --bodyBg-color: #DEFAF8;
- }
+  --primary-color: #00d1c3;
+  --secondary-color: #fccd69;
+  --header-color: #ffffff;
+  --cardBg-color: #ffffff;
+  --bodyBg-color: #defaf8;
+}
 
- body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    background: var(--bodyBg-color);
-    padding: 0;
-    margin: 0;
- }
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  background: var(--bodyBg-color);
+  padding: 0;
+  margin: 0;
+}
 
 h1,
 h2,
 h3,
 h4,
 h5 {
-    font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
 }
 
 /* ========== HEADER ============= */
 
 .recipe__header {
-    background: var(--primary-color);
-    color: var(--header-color);
-    padding: 1em;
-    text-align: center;
+  background: var(--primary-color);
+  color: var(--header-color);
+  padding: 1em;
+  text-align: center;
+}
+
+.recipe__title,
+.recipe__subtitle {
+  margin-top: 0;
+  margin-bottom: 0.4em;
+}
+
+.recipe__title {
+  position: relative;
+  padding: 0 20px;
+  display: inline-block;
 }
 
 .recipe__subtitle {
-    font-family: 'Open Sans', sans-serif; 
+  font-family: "Open Sans", sans-serif;
+  margin-top: 0;
 }
 
+.recipe__title::after,
+.recipe__title::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-image: url("./images/half_lime.svg");
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.recipe__title::before {
+  right: 100%;
+  transform: scaleX(-1) translateY(-50%);
+}
+
+.recipe__title::after {
+  left: 100%;
+}
+
+
 .recipe__navigation {
-    display: none;
+  display: none;
 }
 
 /* ========== card ============ */
 
 .recipe__card {
-    background: var(--cardBg-color); 
-    margin: 1em auto 2em;
-    width: 600px;
-    max-width: 100%;
+  background: var(--cardBg-color);
+  margin: 1em auto 2em;
+  width: 600px;
+  max-width: 100%;
 }
 
 .recipe__card__header {
-    background: var(--primary-color);
-    color: var(--header-color);
-    border-bottom: 10px solid var(--secondary-color);
-    padding: 0.3em;
-    text-align: center;
+  background: var(--primary-color);
+  color: var(--header-color);
+  border-bottom: 10px solid var(--secondary-color);
+  padding: 0.3em;
+  text-align: center;
 }
 
 .recipe__card__title {
-    margin: 0;
+  margin: 0;
 }
 
 .recipe__card__content {
-   padding: 1em;
+  padding: 1em;
+}
+
+.recipe__footer {
+  color: var(--header-color);
+  width: 100%;
+  text-align: center;
+  margin-top: 1em;
+  padding: 1em;
+  background-image: linear-gradient(to right, #22c1c3, #fdbb2d);
 }
