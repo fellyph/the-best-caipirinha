@@ -70,7 +70,7 @@ h5 {
   left: 100%;
 }
 
-/* =========== navigation ========== */
+/* =========== NAVIGATION ========== */
 
 .recipe__navigation {
   position: fixed;
@@ -87,6 +87,7 @@ h5 {
 
 .recipe__navigation__item {
   position: relative;
+  font-family: "Pacifico", cursive;
 }
 
 .recipe__navigation__item a {
@@ -114,7 +115,7 @@ h5 {
   left: 5px;
 }
 
-/* ========== card ============ */
+/* ========== CARD ============ */
 
 .recipe__card {
   background: var(--cardBg-color);
@@ -139,15 +140,6 @@ h5 {
   padding: 1em;
 }
 
-.recipe__footer {
-  color: var(--header-color);
-  width: 100%;
-  text-align: center;
-  margin-top: 1em;
-  padding: 1em;
-  background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-}
-
 .recipe__card__step img,
 .recipe__thumb img {
   max-width: 100%;
@@ -158,4 +150,16 @@ h5 {
   margin-bottom: 2.5em;
   padding-bottom: 1em;
   border-bottom: 5px dotted var(--secondary-color);
+}
+
+/* ========== FOOTER ============ */
+
+.recipe__footer {
+  color: var(--header-color);
+  width: 100%;
+  text-align: center;
+  margin-top: 1em;
+  padding: 0.7em;
+  font-size: 12px;
+  background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
 }
