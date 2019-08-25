@@ -85,13 +85,33 @@ h5 {
   margin: 0;
 }
 
+.recipe__navigation__item {
+  position: relative;
+}
+
 .recipe__navigation__item a {
   margin-bottom: 0.3em;
   background: var(--primary-color);
   color: var(--header-color);
   text-decoration: none;
-  padding: 0.3em 0.5em;
+  padding: 0.3em 0.5em 0.3em 2em;
   display: block;
+}
+
+.recipe__navigation__item a:hover {
+  color: var(--primary-color);
+  background: var(--header-color);
+}
+
+.recipe__navigation__item a::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  background-image: url("./images/full_lime.svg");
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  left: 5px;
 }
 
 /* ========== card ============ */
@@ -125,7 +145,7 @@ h5 {
   text-align: center;
   margin-top: 1em;
   padding: 1em;
-  background-image: linear-gradient(to right, #22c1c3, #fdbb2d);
+  background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
 }
 
 .recipe__card__step img,
