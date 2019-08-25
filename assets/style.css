@@ -107,3 +107,11 @@ h5 {
   padding: 1em;
   background-image: linear-gradient(to right, #22c1c3, #fdbb2d);
 }
+
+.recipe__thumb {
+
+}
+
+.recipe__thumb img {
+  max-width: 100%;
+}
