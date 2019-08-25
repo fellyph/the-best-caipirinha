@@ -29,6 +29,7 @@ h5 {
   color: var(--header-color);
   padding: 1em;
   text-align: center;
+  margin-bottom: 2em;
 }
 
 .recipe__title,
@@ -69,9 +70,28 @@ h5 {
   left: 100%;
 }
 
+/* =========== navigation ========== */
 
 .recipe__navigation {
-  display: none;
+  position: fixed;
+}
+
+.recipe__navigation__menu,
+.recipe__navigation__submenu {
+  list-style: none;
+}
+
+.recipe__navigation__menu {
+  margin: 0;
+}
+
+.recipe__navigation__item a {
+  margin-bottom: 0.3em;
+  background: var(--primary-color);
+  color: var(--header-color);
+  text-decoration: none;
+  padding: 0.3em 0.5em;
+  display: block;
 }
 
 /* ========== card ============ */
