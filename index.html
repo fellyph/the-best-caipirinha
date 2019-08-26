@@ -1,15 +1,186 @@
 <!DOCTYPE html>
 <html amp lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="This is the AMP Boilerplate.">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
     <title>How to prepare The best Caipirinha</title>
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/style.css" />
+    <style amp-custom>
+        :root {
+          --primary-color: #00d1c3;
+          --secondary-color: #fccd69;
+          --header-color: #fff;
+          --cardBg-color: #fff;
+          --bodyBg-color: #defaf8;
+        }
+
+        body {
+          font-family: "Open Sans", sans-serif;
+          font-size: 18px;
+          background: var(--bodyBg-color);
+          padding: 0;
+          margin: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+          font-family: "Pacifico", cursive;
+        }
+
+        /* ========== HEADER ============= */
+
+        .recipe__header {
+          background: var(--primary-color);
+          color: var(--header-color);
+          padding: 1em;
+          text-align: center;
+          margin-bottom: 2em;
+        }
+
+        .recipe__title,
+        .recipe__subtitle {
+          margin-top: 0;
+          margin-bottom: 0.4em;
+        }
+
+        .recipe__title {
+          position: relative;
+          padding: 0 20px;
+          display: inline-block;
+        }
+
+        .recipe__subtitle {
+          font-family: "Open Sans", sans-serif;
+          margin-top: 0;
+        }
+
+        .recipe__title::after,
+        .recipe__title::before {
+          content: "";
+          width: 50px;
+          height: 50px;
+          background-image: url("./images/half_lime.svg");
+          display: inline-block;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        .recipe__title::before {
+          right: 100%;
+          transform: scaleX(-1) translateY(-50%);
+        }
+
+        .recipe__title::after {
+          left: 100%;
+        }
+
+        /* =========== NAVIGATION ========== */
+
+        .recipe__navigation {
+          position: fixed;
+        }
+
+        .recipe__navigation__menu,
+        .recipe__navigation__submenu {
+          list-style: none;
+        }
+
+        .recipe__navigation__menu {
+          margin: 0;
+        }
+
+        .recipe__navigation__item {
+          position: relative;
+          font-family: "Pacifico", cursive;
+        }
+
+        .recipe__navigation__item a {
+          margin-bottom: 0.3em;
+          background: var(--primary-color);
+          color: var(--header-color);
+          text-decoration: none;
+          padding: 0.3em 0.5em 0.3em 2em;
+          display: block;
+        }
+
+        .recipe__navigation__item a:hover {
+          color: var(--primary-color);
+          background: var(--header-color);
+        }
+
+        .recipe__navigation__item a::before {
+          content: "";
+          width: 25px;
+          height: 25px;
+          background-image: url("./images/full_lime.svg");
+          display: inline-block;
+          position: absolute;
+          top: 5px;
+          left: 5px;
+        }
+
+        /* ========== CARD ============ */
+
+        .recipe__card {
+          background: var(--cardBg-color);
+          margin: 1em auto 2em;
+          width: 600px;
+          max-width: 100%;
+        }
+
+        .recipe__card__header {
+          background: var(--primary-color);
+          color: var(--header-color);
+          border-bottom: 10px solid var(--secondary-color);
+          padding: 0.3em;
+          text-align: center;
+        }
+
+        .recipe__card__title {
+          margin: 0;
+        }
+
+        .recipe__card__content {
+          padding: 1em;
+        }
+
+        .recipe__card__step img,
+        .recipe__thumb img {
+          max-width: 100%;
+        }
+
+        .recipe__card__step {
+          text-align: center;
+          margin-bottom: 2.5em;
+          padding-bottom: 1em;
+          border-bottom: 5px dotted var(--secondary-color);
+        }
+
+        /* ========== FOOTER ============ */
+
+        .recipe__footer {
+          color: var(--header-color);
+          width: 100%;
+          text-align: center;
+          margin-top: 1em;
+          padding: 0.7em;
+          font-size: 12px;
+          background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+        }
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="canonical" href=".">
   </head>
   <body>
     <main>
@@ -51,9 +222,7 @@
         <header class="recipe__card__header">
           <h2 class="recipe__card__title">About</h2>
         </header>
-        <picture class="recipe__thumb">
-          <img src="./assets/images/caipirinha.webp" />
-        </picture>
+        <amp-img src="./assets/images/caipirinha.webp" />
         <div class="recipe__card__content">
           <p>
             Caipirinha is Brazil's national cocktail, made with cachaça
@@ -79,9 +248,7 @@
         <header class="recipe__card__header">
           <h2 class="recipe__card__title">Ingredients</h2>
         </header>
-        <picture class="recipe__thumb">
-          <img src="./assets/images/ingredients_caipirinha.webp" />
-        </picture>
+        <amp-img src="./assets/images/ingredients_caipirinha.webp" />
         <div class="recipe__card__content">
           <ol>
             <li>1/2 lime</li>
@@ -97,26 +264,26 @@
         </header>
         <div class="recipe__card__content">
           <figure class="recipe__card__step" id="step1">
-            <img src="./assets/images/caipirinha_step1.jpg">
+            <amp-img src="./assets/images/caipirinha_step1.jpg">
             <figcaption>1. Gather the ingredients.</figcaption>
           </figure>
           <figure class="recipe__card__step" id="step2">
-            <img src="./assets/images/caipirinha_step2.jpg">
+            <amp-img src="./assets/images/caipirinha_step2.jpg">
             <figcaption>2. Cut half of a lime into small wedges.</figcaption>
           </figure>
           <figure class="recipe__card__step" id="step3">
-            <img src="./assets/images/caipirinha_step3.jpg">
+            <amp-img src="./assets/images/caipirinha_step3.jpg">
             <figcaption>
               3. Place the lime and sugar into an old-fashioned glass and muddle
               well.
             </figcaption>
           </figure>
           <figure class="recipe__card__step" id="step4">
-            <img src="./assets/images/caipirinha_step4.jpg">
+            <amp-img src="./assets/images/caipirinha_step4.jpg">
             <figcaption>4. Add a few ice cubes.</figcaption>
           </figure>
           <figure class="recipe__card__step" id="step5">
-            <img src="./assets/images/caipirinha_step5.jpg">
+            <amp-img src="./assets/images/caipirinha_step5.jpg">
             <figcaption>5. Top the drink with cachaça.</figcaption>
           </figure>
           <figure>
