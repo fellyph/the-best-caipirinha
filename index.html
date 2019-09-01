@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html amp lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="This is the AMP Boilerplate.">
+    <meta name="description" content="How to prepare the best caipirinha">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
@@ -135,7 +135,7 @@
         .recipe__card {
           background: var(--cardBg-color);
           margin: 1em auto 2em;
-          width: 700px;
+          width: 600px;
           max-width: 100%;
         }
 
@@ -153,6 +153,11 @@
 
         .recipe__card__content {
           padding: 1em;
+        }
+
+        .recipe__card__step img,
+        .recipe__thumb img {
+          max-width: 100%;
         }
 
         .recipe__card__step {
@@ -176,6 +181,8 @@
     </style>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <link rel="canonical" href=".">
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <script async custom-element="amp-video-docking" src="https://cdn.ampproject.org/v0/amp-video-docking-0.1.js"></script>
   </head>
   <body>
     <main>
@@ -184,7 +191,9 @@
       </header>
       <nav class="recipe__navigation">
         <ul class="recipe__navigation__menu">
-          <li class="recipe__navigation__item"><a href="#about">About</a></li>
+          <li class="recipe__navigation__item">
+            <a href="#about">About</a>
+          </li>
           <li class="recipe__navigation__item">
             <a href="#ingredients">Ingredients</a>
           </li>
@@ -217,15 +226,19 @@
         <header class="recipe__card__header">
           <h2 class="recipe__card__title">About</h2>
         </header>
-        <amp-img src="./assets/images/caipirinha.webp" alt="About Caipirinha"
-          width="700" height="526" layout="responsive">
-            <amp-img alt="About Caipirinha"
-            fallback
-            width="700"
-            height="526"
-            layout="responsive"
-            src="./assets/images/caipirinha.jpeg"></amp-img>
-        </amp-img>
+        <amp-youtube
+          data-videoid="T6OSr4mAcKA"
+          layout="responsive"
+          dock
+          width="480" height="270">
+          <amp-img
+          width="700"
+          height="526"
+          alt="Brazilian Caipirinha"
+          layout="responsive"
+          placeholder
+          src="./assets/images/caipirinha.jpg" ></amp-img>
+        </amp-youtube>
         <div class="recipe__card__content">
           <p>
             Caipirinha is Brazil's national cocktail, made with cachaça
@@ -251,17 +264,18 @@
         <header class="recipe__card__header">
           <h2 class="recipe__card__title">Ingredients</h2>
         </header>
-        <amp-img src="./assets/images/ingredients_caipirinha.webp"
-          alt="Ingredients"
+
+        <amp-img
           width="700"
           height="526"
-          layout="responsive">
-            <amp-img alt="Ingredients"
-            fallback
-            width="700"
-            height="526"
-            layout="responsive"
-            src="./assets/images/ingredients_caipirinha.jpg"></amp-img>
+          layout="responsive"
+          src="./assets/images/ingredients_caipirinha.webp" >
+          <amp-img
+          width="700"
+          height="526"
+          layout="responsive"
+          fallback
+          src="./assets/images/ingredients_caipirinha.jpg" ></amp-img>
         </amp-img>
         <div class="recipe__card__content">
           <ol>
@@ -278,26 +292,26 @@
         </header>
         <div class="recipe__card__content">
           <figure class="recipe__card__step" id="step1">
-            <amp-img src="./assets/images/caipirinha_step1.jpg" width="700" height="526" layout="responsive"></amp-img>
+            <amp-img width="700" height="526" src="./assets/images/caipirinha_step1.jpg" layout="responsive"></amp-img>
             <figcaption>1. Gather the ingredients.</figcaption>
           </figure>
           <figure class="recipe__card__step" id="step2">
-            <amp-img src="./assets/images/caipirinha_step2.jpg" width="700" height="526" layout="responsive"></amp-img>
+            <amp-img width="700" height="526" src="./assets/images/caipirinha_step2.jpg" layout="responsive"></amp-img>
             <figcaption>2. Cut half of a lime into small wedges.</figcaption>
           </figure>
           <figure class="recipe__card__step" id="step3">
-            <amp-img src="./assets/images/caipirinha_step3.jpg" width="700" height="526" layout="responsive"></amp-img>
+            <amp-img width="700" height="526" src="./assets/images/caipirinha_step3.jpg" layout="responsive"></amp-img>
             <figcaption>
               3. Place the lime and sugar into an old-fashioned glass and muddle
               well.
             </figcaption>
           </figure>
           <figure class="recipe__card__step" id="step4">
-            <amp-img src="./assets/images/caipirinha_step4.jpg" width="700" height="526" layout="responsive"></amp-img>
+            <amp-img width="700" height="526" src="./assets/images/caipirinha_step4.jpg" layout="responsive"></amp-img>
             <figcaption>4. Add a few ice cubes.</figcaption>
           </figure>
           <figure class="recipe__card__step" id="step5">
-            <amp-img src="./assets/images/caipirinha_step5.jpg" width="700" height="526" layout="responsive"></amp-img>
+            <amp-img width="700" height="526" src="./assets/images/caipirinha_step5.jpg" layout="responsive"></amp-img>
             <figcaption>5. Top the drink with cachaça.</figcaption>
           </figure>
           <figure>
