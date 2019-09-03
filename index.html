@@ -19,6 +19,7 @@
           --header-color: #fff;
           --cardBg-color: #fff;
           --bodyBg-color: #defaf8;
+          --title-color: #333;
         }
 
         body {
@@ -155,6 +156,13 @@
           padding: 1em;
         }
 
+        .recipe__card__content h2,
+        .recipe__card__content h3 {
+          text-align: center;
+          color: var(--title-color);
+          font-family: "Open Sans", sans-serif;
+        }
+
         .recipe__card__step img,
         .recipe__thumb img {
           max-width: 100%;
@@ -168,6 +176,10 @@
           padding-bottom: 1em;
           border-bottom: 5px dotted var(--secondary-color);
           margin-bottom: 2.5em;
+        }
+
+        .recipe__share {
+          text-align: center;
         }
 
         /* ========== STEPS ========== */
