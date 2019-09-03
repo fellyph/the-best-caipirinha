@@ -12,4 +12,8 @@ The course will use the following sequence:
 
 ## Class 4 - How to work with amp-carousel
 
+## Class 5 - How to work with amp-social-share
+
+## Class 6 - How to listen events
+
 ## Project by Fellyph Cintra
