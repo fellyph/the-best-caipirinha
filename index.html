@@ -48,6 +48,15 @@
           margin-bottom: 2em;
         }
 
+        .recipe__header__menuBtn {
+          display: block;
+          margin: 0 auto;
+          background: var(--header-color);
+          color: var(--primary-color);
+          border: none;
+          padding: 1em;
+        }
+
         .recipe__title,
         .recipe__subtitle {
           margin-top: 0;
@@ -88,13 +97,10 @@
 
         /* =========== NAVIGATION ========== */
 
-        .recipe__navigation {
-          position: fixed;
-        }
-
         .recipe__navigation__menu,
         .recipe__navigation__submenu {
           list-style: none;
+          margin: 0.5em;
         }
 
         .recipe__navigation__menu {
@@ -234,43 +240,8 @@
     <main>
       <header class="recipe__header">
         <h1 class="recipe__title">How to prepare The Best Caipirinha</h1>
+        <button class="recipe__header__menuBtn" on='tap:sidebar-menu.toggle'>Menu</button>
       </header>
-      <amp-sidebar id="sidebar-menu">
-        <nav class="recipe__navigation nav">
-          <ul class="recipe__navigation__menu">
-            <li class="recipe__navigation__item">
-              <a href="#about">About</a>
-            </li>
-            <li class="recipe__navigation__item">
-              <a href="#ingredients">Ingredients</a>
-            </li>
-            <li class="recipe__navigation__item">
-              <a href="#steps">Steps to Make It</a>
-              <ul class="recipe__navigation__submenu">
-                <li class="recipe__navigation__item">
-                  <a href="#step1">Step 1</a>
-                </li>
-                <li class="recipe__navigation__item">
-                  <a href="#step2">Step 2</a>
-                </li>
-                <li class="recipe__navigation__item">
-                  <a href="#step3">Step 3</a>
-                </li>
-                <li class="recipe__navigation__item">
-                  <a href="#step4">Step 4</a>
-                </li>
-                <li class="recipe__navigation__item">
-                  <a href="#step5">Step 5</a>
-                </li>
-                <li class="recipe__navigation__item">
-                  <a href="#step6">Step 6</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-
-      </amp-sidebar>
       <section class="recipe__about recipe__card" id="about">
         <header class="recipe__card__header">
           <h2 class="recipe__card__title">About</h2>
@@ -409,6 +380,41 @@
           </div>
         </div>
       </section>
+      <amp-sidebar id="sidebar-menu" side="left" layout="nodisplay" width="200">
+          <nav class="recipe__navigation nav">
+            <ul class="recipe__navigation__menu">
+              <li class="recipe__navigation__item">
+                <a href="#about">About</a>
+              </li>
+              <li class="recipe__navigation__item">
+                <a href="#ingredients">Ingredients</a>
+              </li>
+              <li class="recipe__navigation__item">
+                <a href="#steps">Steps to Make It</a>
+                <ul class="recipe__navigation__submenu">
+                  <li class="recipe__navigation__item">
+                    <a href="#step1">Step 1</a>
+                  </li>
+                  <li class="recipe__navigation__item">
+                    <a href="#step2">Step 2</a>
+                  </li>
+                  <li class="recipe__navigation__item">
+                    <a href="#step3">Step 3</a>
+                  </li>
+                  <li class="recipe__navigation__item">
+                    <a href="#step4">Step 4</a>
+                  </li>
+                  <li class="recipe__navigation__item">
+                    <a href="#step5">Step 5</a>
+                  </li>
+                  <li class="recipe__navigation__item">
+                    <a href="#step6">Step 6</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </amp-sidebar>
       <footer class="recipe__footer">
         <h3 class="recipe__subtitle">By Fellyph Cintra</h3>
         Please do not share with anyone under the legal purchase age for
