@@ -200,6 +200,16 @@
           vertical-align: middle;
         }
 
+        /* ========== SHARE ========== */
+
+        amp-social-share[type='twitter'],
+        amp-social-share[type='facebook'],
+        amp-social-share[type='email'],
+        amp-social-share[type='whatsapp'],
+        amp-social-share[type='linkedin'] {
+          background-color: var(--primary-color);
+        }
+
         /* ========== FOOTER ============ */
 
         .recipe__footer {
@@ -218,45 +228,49 @@
     <script async custom-element="amp-video-docking" src="https://cdn.ampproject.org/v0/amp-video-docking-0.1.js"></script>
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
   </head>
   <body>
     <main>
       <header class="recipe__header">
         <h1 class="recipe__title">How to prepare The Best Caipirinha</h1>
       </header>
-      <nav class="recipe__navigation">
-        <ul class="recipe__navigation__menu">
-          <li class="recipe__navigation__item">
-            <a href="#about">About</a>
-          </li>
-          <li class="recipe__navigation__item">
-            <a href="#ingredients">Ingredients</a>
-          </li>
-          <li class="recipe__navigation__item">
-            <a href="#steps">Steps to Make It</a>
-            <ul class="recipe__navigation__submenu">
-              <li class="recipe__navigation__item">
-                <a href="#step1">Step 1</a>
-              </li>
-              <li class="recipe__navigation__item">
-                <a href="#step2">Step 2</a>
-              </li>
-              <li class="recipe__navigation__item">
-                <a href="#step3">Step 3</a>
-              </li>
-              <li class="recipe__navigation__item">
-                <a href="#step4">Step 4</a>
-              </li>
-              <li class="recipe__navigation__item">
-                <a href="#step5">Step 5</a>
-              </li>
-              <li class="recipe__navigation__item">
-                <a href="#step6">Step 6</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
+      <amp-sidebar id="sidebar-menu">
+        <nav class="recipe__navigation nav">
+          <ul class="recipe__navigation__menu">
+            <li class="recipe__navigation__item">
+              <a href="#about">About</a>
+            </li>
+            <li class="recipe__navigation__item">
+              <a href="#ingredients">Ingredients</a>
+            </li>
+            <li class="recipe__navigation__item">
+              <a href="#steps">Steps to Make It</a>
+              <ul class="recipe__navigation__submenu">
+                <li class="recipe__navigation__item">
+                  <a href="#step1">Step 1</a>
+                </li>
+                <li class="recipe__navigation__item">
+                  <a href="#step2">Step 2</a>
+                </li>
+                <li class="recipe__navigation__item">
+                  <a href="#step3">Step 3</a>
+                </li>
+                <li class="recipe__navigation__item">
+                  <a href="#step4">Step 4</a>
+                </li>
+                <li class="recipe__navigation__item">
+                  <a href="#step5">Step 5</a>
+                </li>
+                <li class="recipe__navigation__item">
+                  <a href="#step6">Step 6</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+      </amp-sidebar>
       <section class="recipe__about recipe__card" id="about">
         <header class="recipe__card__header">
           <h2 class="recipe__card__title">About</h2>
@@ -387,11 +401,11 @@
           </p>
           <div class="recipe__share">
             <h3>If you liked this content, Please share!</h3>
-            <amp-social-share type="twitter"></amp-social-share>
-            <amp-social-share type="email"></amp-social-share>
-            <amp-social-share type="linkedin"></amp-social-share>
-            <amp-social-share type="facebook"></amp-social-share>
-            <amp-social-share type="whatsapp"></amp-social-share>
+            <amp-social-share type="twitter" width="50" height="50"></amp-social-share>
+            <amp-social-share type="email" width="50" height="50"></amp-social-share>
+            <amp-social-share type="linkedin" width="50" height="50"></amp-social-share>
+            <amp-social-share type="facebook" width="50" height="50"></amp-social-share>
+            <amp-social-share type="whatsapp" width="50" height="50"></amp-social-share>
           </div>
         </div>
       </section>
