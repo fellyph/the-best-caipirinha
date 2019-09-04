@@ -101,10 +101,7 @@
         .recipe__navigation__submenu {
           list-style: none;
           margin: 0.5em;
-        }
-
-        .recipe__navigation__menu {
-          margin: 0;
+          padding: 0;
         }
 
         .recipe__navigation__item {
@@ -237,6 +234,41 @@
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
   </head>
   <body>
+      <amp-sidebar id="sidebar-menu" side="left" layout="nodisplay">
+          <nav class="recipe__navigation nav">
+            <ul class="recipe__navigation__menu">
+              <li class="recipe__navigation__item">
+                <a href="#about">About</a>
+              </li>
+              <li class="recipe__navigation__item">
+                <a href="#ingredients">Ingredients</a>
+              </li>
+              <li class="recipe__navigation__item">
+                <a href="#steps">Steps to Make It</a>
+                <ul class="recipe__navigation__submenu">
+                  <li class="recipe__navigation__item">
+                    <a href="#step1">Step 1</a>
+                  </li>
+                  <li class="recipe__navigation__item">
+                    <a href="#step2">Step 2</a>
+                  </li>
+                  <li class="recipe__navigation__item">
+                    <a href="#step3">Step 3</a>
+                  </li>
+                  <li class="recipe__navigation__item">
+                    <a href="#step4">Step 4</a>
+                  </li>
+                  <li class="recipe__navigation__item">
+                    <a href="#step5">Step 5</a>
+                  </li>
+                  <li class="recipe__navigation__item">
+                    <a href="#step6">Step 6</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </amp-sidebar>
     <main>
       <header class="recipe__header">
         <h1 class="recipe__title">How to prepare The Best Caipirinha</h1>
@@ -380,41 +412,6 @@
           </div>
         </div>
       </section>
-      <amp-sidebar id="sidebar-menu" side="left" layout="nodisplay" width="200">
-          <nav class="recipe__navigation nav">
-            <ul class="recipe__navigation__menu">
-              <li class="recipe__navigation__item">
-                <a href="#about">About</a>
-              </li>
-              <li class="recipe__navigation__item">
-                <a href="#ingredients">Ingredients</a>
-              </li>
-              <li class="recipe__navigation__item">
-                <a href="#steps">Steps to Make It</a>
-                <ul class="recipe__navigation__submenu">
-                  <li class="recipe__navigation__item">
-                    <a href="#step1">Step 1</a>
-                  </li>
-                  <li class="recipe__navigation__item">
-                    <a href="#step2">Step 2</a>
-                  </li>
-                  <li class="recipe__navigation__item">
-                    <a href="#step3">Step 3</a>
-                  </li>
-                  <li class="recipe__navigation__item">
-                    <a href="#step4">Step 4</a>
-                  </li>
-                  <li class="recipe__navigation__item">
-                    <a href="#step5">Step 5</a>
-                  </li>
-                  <li class="recipe__navigation__item">
-                    <a href="#step6">Step 6</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-        </amp-sidebar>
       <footer class="recipe__footer">
         <h3 class="recipe__subtitle">By Fellyph Cintra</h3>
         Please do not share with anyone under the legal purchase age for
