@@ -10,6 +10,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/slick/slick-theme.css"/>
   </head>
   <body>
     <main>
@@ -51,9 +53,7 @@
         <header class="recipe__card__header">
           <h2 class="recipe__card__title">About</h2>
         </header>
-        <picture class="recipe__thumb">
-          <img src="./assets/images/caipirinha.webp" />
-        </picture>
+        <iframe width="700" height="315" src="https://www.youtube.com/embed/T6OSr4mAcKA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="recipe__card__content">
           <p>
             Caipirinha is Brazil's national cocktail, made with cachaça
@@ -96,32 +96,42 @@
           <h2 class="recipe__card__title">Steps to Make It</h2>
         </header>
         <div class="recipe__card__content">
-          <figure class="recipe__card__step" id="step1">
-            <img src="./assets/images/caipirinha_step1.jpg">
-            <figcaption>1. Gather the ingredients.</figcaption>
-          </figure>
-          <figure class="recipe__card__step" id="step2">
-            <img src="./assets/images/caipirinha_step2.jpg">
-            <figcaption>2. Cut half of a lime into small wedges.</figcaption>
-          </figure>
-          <figure class="recipe__card__step" id="step3">
-            <img src="./assets/images/caipirinha_step3.jpg">
-            <figcaption>
-              3. Place the lime and sugar into an old-fashioned glass and muddle
-              well.
-            </figcaption>
-          </figure>
-          <figure class="recipe__card__step" id="step4">
-            <img src="./assets/images/caipirinha_step4.jpg">
-            <figcaption>4. Add a few ice cubes.</figcaption>
-          </figure>
-          <figure class="recipe__card__step" id="step5">
-            <img src="./assets/images/caipirinha_step5.jpg">
-            <figcaption>5. Top the drink with cachaça.</figcaption>
-          </figure>
-          <figure>
-            <figcaption>6. Stir well and enjoy!</figcaption>
-          </figure>
+          <div class="recipe_slider">
+              <img src="./assets/images/caipirinha_step1.jpg">
+              <img src="./assets/images/caipirinha_step2.jpg">
+              <img src="./assets/images/caipirinha_step3.jpg">
+              <img src="./assets/images/caipirinha_step4.jpg">
+              <img src="./assets/images/caipirinha_step5.jpg">
+          </div>
+        <h3  id="step1">1. Gather the ingredients.</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis explicabo vero, facere, dolorem quia eligendi soluta expedita maxime animi, quos deleniti exercitationem quae impedit recusandae nobis laborum hic? Sed, dolor.
+          </p>
+
+          <h3  id="step2">2. Cut half of a lime into small wedges.</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis porro, facere, ipsa id repudiandae illum tenetur nulla vel et molestias fugit.
+          </p>
+
+          <h3  id="step3">3. Place the lime and sugar into an old-fashioned glass and muddle well.</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis porro, facere, ipsa id repudiandae illum tenetur nulla vel et molestias fugit.
+          </p>
+
+          <h3  id="step4">4. Add a few ice cubes.</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis porro, facere, ipsa id repudiandae illum tenetur nulla vel et molestias fugit.
+          </p>
+
+          <h3  id="step5">5. Top the drink with cachaça.</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis porro, facere, ipsa id repudiandae illum tenetur nulla vel et molestias fugit.
+          </p>
+
+          <h3  id="step6">6. Stir well and enjoy!</h3>
+          <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis porro, facere, ipsa id repudiandae illum tenetur nulla vel et molestias fugit.
+          </p>
         </div>
       </section>
       <footer class="recipe__footer">
@@ -130,5 +140,13 @@
         alcohol.Drink Responsibly.
       </footer>
     </main>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./assets/slick/slick.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.recipe_slider').slick();
+      });
+    </script>
   </body>
 </html>
