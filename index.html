@@ -10,6 +10,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/slick/slick.css"/>
+    // Add the new slick-theme.css if you want the default styling
+    <link rel="stylesheet" type="text/css" href="./assets/slick/slick-theme.css"/>
   </head>
   <body>
     <main>
@@ -51,9 +54,7 @@
         <header class="recipe__card__header">
           <h2 class="recipe__card__title">About</h2>
         </header>
-        <picture class="recipe__thumb">
-          <img src="./assets/images/caipirinha.webp" />
-        </picture>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/T6OSr4mAcKA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="recipe__card__content">
           <p>
             Caipirinha is Brazil's national cocktail, made with cachaça
@@ -96,6 +97,13 @@
           <h2 class="recipe__card__title">Steps to Make It</h2>
         </header>
         <div class="recipe__card__content">
+          <div class="recipe_slider">
+              <img src="./assets/images/caipirinha_step1.jpg">
+              <img src="./assets/images/caipirinha_step2.jpg">
+              <img src="./assets/images/caipirinha_step3.jpg">
+              <img src="./assets/images/caipirinha_step4.jpg">
+              <img src="./assets/images/caipirinha_step5.jpg">
+          </div>
           <figure class="recipe__card__step" id="step1">
             <img src="./assets/images/caipirinha_step1.jpg">
             <figcaption>1. Gather the ingredients.</figcaption>
@@ -130,5 +138,13 @@
         alcohol.Drink Responsibly.
       </footer>
     </main>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./assets/slick/slick.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.recipe_slider').slick();
+      });
+    </script>
   </body>
 </html>
