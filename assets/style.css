@@ -148,6 +148,11 @@ h5 {
   font-family: "Open Sans", sans-serif;
 }
 
+.recipe__card__content .slick-prev::before,
+.recipe__card__content .slick-next::before {
+  color: var(--primary-color);
+}
+
 .recipe__card__step img,
 .recipe__thumb img {
   max-width: 100%;
