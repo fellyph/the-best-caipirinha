@@ -55,7 +55,7 @@ h5 {
   content: "";
   width: 50px;
   height: 50px;
-  background-image: url("./assets/images/half_lime.svg");
+  background-image: url("./images/half_lime.svg");
   display: inline-block;
   position: absolute;
   top: 50%;
@@ -109,7 +109,7 @@ h5 {
   content: "";
   width: 25px;
   height: 25px;
-  background-image: url("./assets/images/full_lime.svg");
+  background-image: url("./images/full_lime.svg");
   display: inline-block;
   position: absolute;
   top: 5px;
