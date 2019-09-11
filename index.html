@@ -1,296 +1,65 @@
 <!DOCTYPE html>
-<html amp lang="en">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="How to prepare the best caipirinha">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="./assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00d1c3">
+    <meta name="theme-color" content="#00d1c3">
     <title>How to prepare The best Caipirinha</title>
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico&display=swap"
       rel="stylesheet"
     />
-    <style amp-custom>
-        :root {
-          --primary-color: #00d1c3;
-          --secondary-color: #fccd69;
-          --header-color: #fff;
-          --cardBg-color: #fff;
-          --bodyBg-color: #defaf8;
-          --title-color: #333;
-        }
-
-        body {
-          font-family: "Open Sans", sans-serif;
-          font-size: 18px;
-          background: var(--bodyBg-color);
-          padding: 0;
-          margin: 0;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
-          font-family: "Pacifico", cursive;
-        }
-
-        /* ========== HEADER ============= */
-
-        .recipe__header {
-          background: var(--primary-color);
-          color: var(--header-color);
-          padding: 1em;
-          text-align: center;
-          margin-bottom: 2em;
-        }
-
-        .recipe__header__menuBtn {
-          display: block;
-          margin: 0 auto;
-          background: var(--header-color);
-          color: var(--primary-color);
-          border: none;
-          padding: 1em;
-        }
-
-        .recipe__title,
-        .recipe__subtitle {
-          margin-top: 0;
-          margin-bottom: 0.4em;
-        }
-
-        .recipe__title {
-          position: relative;
-          padding: 0 20px;
-          display: inline-block;
-        }
-
-        .recipe__subtitle {
-          font-family: "Open Sans", sans-serif;
-          margin-top: 0;
-        }
-
-        .recipe__title::after,
-        .recipe__title::before {
-          content: "";
-          width: 50px;
-          height: 50px;
-          background-image: url("./assets/images/half_lime.svg");
-          display: inline-block;
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-        }
-
-        .recipe__title::before {
-          right: 100%;
-          transform: scaleX(-1) translateY(-50%);
-        }
-
-        .recipe__title::after {
-          left: 100%;
-        }
-
-        /* =========== NAVIGATION ========== */
-
-        .recipe__navigation__menu,
-        .recipe__navigation__submenu {
-          list-style: none;
-          margin: 0.5em;
-          padding: 0;
-        }
-
-        .recipe__navigation__item {
-          position: relative;
-          font-family: "Pacifico", cursive;
-        }
-
-        .recipe__navigation__item a {
-          margin-bottom: 0.3em;
-          background: var(--primary-color);
-          color: var(--header-color);
-          text-decoration: none;
-          padding: 0.3em 0.5em 0.3em 2em;
-          display: block;
-        }
-
-        .recipe__navigation__item a:hover {
-          color: var(--primary-color);
-          background: var(--header-color);
-        }
-
-        .recipe__navigation__item a::before {
-          content: "";
-          width: 25px;
-          height: 25px;
-          background-image: url("./assets/images/full_lime.svg");
-          display: inline-block;
-          position: absolute;
-          top: 5px;
-          left: 5px;
-        }
-
-        /* ========== CARD ============ */
-
-        .recipe__card {
-          background: var(--cardBg-color);
-          margin: 1em auto 2em;
-          width: 700px;
-          max-width: 100%;
-        }
-
-        .recipe__card__header {
-          background: var(--primary-color);
-          color: var(--header-color);
-          border-bottom: 10px solid var(--secondary-color);
-          padding: 0.3em;
-          text-align: center;
-        }
-
-        .recipe__card__title {
-          margin: 0;
-        }
-
-        .recipe__card__content {
-          padding: 1em;
-        }
-
-        .recipe__card__content h2,
-        .recipe__card__content h3 {
-          text-align: center;
-          color: var(--title-color);
-          font-family: "Open Sans", sans-serif;
-        }
-
-        .recipe__card__step img,
-        .recipe__thumb img {
-          max-width: 100%;
-        }
-
-        .recipe__card__step {
-          text-align: center;
-        }
-
-        .recipe__card__carousel {
-          padding-bottom: 1em;
-          border-bottom: 5px dotted var(--secondary-color);
-          margin-bottom: 2.5em;
-        }
-
-        .recipe__share {
-          text-align: center;
-        }
-
-        /* ========== STEPS ========== */
-
-        .recipe__steps__final {
-          width: 700px;
-          height: 100%;
-          max-width: 100%;
-          color: var(--header-color);
-          background: var(--primary-color);
-          font-size: 3em;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        .recipe__steps__final span {
-          vertical-align: middle;
-        }
-
-        /* ========== SHARE ========== */
-
-        amp-social-share[type='twitter'],
-        amp-social-share[type='facebook'],
-        amp-social-share[type='email'],
-        amp-social-share[type='whatsapp'],
-        amp-social-share[type='linkedin'] {
-          background-color: var(--primary-color);
-        }
-
-        /* ========== FOOTER ============ */
-
-        .recipe__footer {
-          color: var(--header-color);
-          width: 100%;
-          text-align: center;
-          margin-top: 1em;
-          padding: 0.7em;
-          font-size: 12px;
-          background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-        }
-    </style>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="canonical" href=".">
-    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
-    <script async custom-element="amp-video-docking" src="https://cdn.ampproject.org/v0/amp-video-docking-0.1.js"></script>
-    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
-    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/slick/slick-theme.css"/>
   </head>
   <body>
-      <amp-sidebar id="sidebar-menu" side="left" layout="nodisplay">
-          <nav class="recipe__navigation nav">
-            <ul class="recipe__navigation__menu">
-              <li class="recipe__navigation__item">
-                <a href="#about">About</a>
-              </li>
-              <li class="recipe__navigation__item">
-                <a href="#ingredients">Ingredients</a>
-              </li>
-              <li class="recipe__navigation__item">
-                <a href="#steps">Steps to Make It</a>
-                <ul class="recipe__navigation__submenu">
-                  <li class="recipe__navigation__item">
-                    <a href="#step1">Step 1</a>
-                  </li>
-                  <li class="recipe__navigation__item">
-                    <a href="#step2">Step 2</a>
-                  </li>
-                  <li class="recipe__navigation__item">
-                    <a href="#step3">Step 3</a>
-                  </li>
-                  <li class="recipe__navigation__item">
-                    <a href="#step4">Step 4</a>
-                  </li>
-                  <li class="recipe__navigation__item">
-                    <a href="#step5">Step 5</a>
-                  </li>
-                  <li class="recipe__navigation__item">
-                    <a href="#step6">Step 6</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-        </amp-sidebar>
     <main>
       <header class="recipe__header">
         <h1 class="recipe__title">How to prepare The Best Caipirinha</h1>
-        <button class="recipe__header__menuBtn" on='tap:sidebar-menu.toggle'>Menu</button>
       </header>
+      <nav class="recipe__navigation">
+        <ul class="recipe__navigation__menu">
+          <li class="recipe__navigation__item"><a href="#about">About</a></li>
+          <li class="recipe__navigation__item">
+            <a href="#ingredients">Ingredients</a>
+          </li>
+          <li class="recipe__navigation__item">
+            <a href="#steps">Steps to Make It</a>
+            <ul class="recipe__navigation__submenu">
+              <li class="recipe__navigation__item">
+                <a href="#step1">Step 1</a>
+              </li>
+              <li class="recipe__navigation__item">
+                <a href="#step2">Step 2</a>
+              </li>
+              <li class="recipe__navigation__item">
+                <a href="#step3">Step 3</a>
+              </li>
+              <li class="recipe__navigation__item">
+                <a href="#step4">Step 4</a>
+              </li>
+              <li class="recipe__navigation__item">
+                <a href="#step5">Step 5</a>
+              </li>
+              <li class="recipe__navigation__item">
+                <a href="#step6">Step 6</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
       <section class="recipe__about recipe__card" id="about">
         <header class="recipe__card__header">
           <h2 class="recipe__card__title">About</h2>
         </header>
-        <amp-youtube
-          data-videoid="T6OSr4mAcKA"
-          layout="responsive"
-          dock
-          width="480" height="270">
-          <amp-img
-          width="700"
-          height="526"
-          alt="Brazilian Caipirinha"
-          layout="responsive"
-          placeholder
-          src="./assets/images/caipirinha.jpg" ></amp-img>
-        </amp-youtube>
+        <iframe width="700" height="315" src="https://www.youtube.com/embed/T6OSr4mAcKA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="recipe__card__content">
           <p>
             Caipirinha is Brazil's national cocktail, made with cachaça
@@ -316,19 +85,9 @@
         <header class="recipe__card__header">
           <h2 class="recipe__card__title">Ingredients</h2>
         </header>
-
-        <amp-img
-          width="700"
-          height="526"
-          layout="responsive"
-          src="./assets/images/ingredients_caipirinha.webp" >
-          <amp-img
-          width="700"
-          height="526"
-          layout="responsive"
-          fallback
-          src="./assets/images/ingredients_caipirinha.jpg" ></amp-img>
-        </amp-img>
+        <picture class="recipe__thumb">
+          <img src="./assets/images/ingredients_caipirinha.webp" />
+        </picture>
         <div class="recipe__card__content">
           <ol>
             <li>1/2 lime</li>
@@ -343,37 +102,14 @@
           <h2 class="recipe__card__title">Steps to Make It</h2>
         </header>
         <div class="recipe__card__content">
-          <amp-carousel class="recipe__card__carousel" width="700" height="526" type="slides" layout="responsive">
-            <figure class="recipe__card__step">
-              <amp-img width="700" height="526" src="./assets/images/caipirinha_step1.jpg" layout="responsive"></amp-img>
-              <figcaption></figcaption>
-            </figure>
-            <figure class="recipe__card__step">
-              <amp-img width="700" height="526" src="./assets/images/caipirinha_step2.jpg" layout="responsive"></amp-img>
-              <figcaption>2. Cut half of a lime into small wedges.</figcaption>
-            </figure>
-            <figure class="recipe__card__step">
-              <amp-img width="700" height="526" src="./assets/images/caipirinha_step3.jpg" layout="responsive"></amp-img>
-              <figcaption>
-                3. Place the lime and sugar into an old-fashioned glass and muddle well.
-              </figcaption>
-            </figure>
-            <figure class="recipe__card__step" id="step4">
-              <amp-img width="700" height="526" src="./assets/images/caipirinha_step4.jpg" layout="responsive"></amp-img>
-              <figcaption>4. Add a few ice cubes.</figcaption>
-            </figure>
-            <figure class="recipe__card__step" id="step5">
-              <amp-img width="700" height="526" src="./assets/images/caipirinha_step5.jpg" layout="responsive"></amp-img>
-              <figcaption>5. Top the drink with cachaça.</figcaption>
-            </figure>
-            <div class="recipe__steps__final">
-              <span>
-                6. Stir well sjhhsjhsajhsjh and enjoy!
-              </span>
-            </div>
-          </amp-carousel>
-
-          <h3  id="step1">1. Gather the ingredients.</h3>
+          <div class="recipe_slider">
+              <img src="./assets/images/caipirinha_step1.jpg">
+              <img src="./assets/images/caipirinha_step2.jpg">
+              <img src="./assets/images/caipirinha_step3.jpg">
+              <img src="./assets/images/caipirinha_step4.jpg">
+              <img src="./assets/images/caipirinha_step5.jpg">
+          </div>
+        <h3  id="step1">1. Gather the ingredients.</h3>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis explicabo vero, facere, dolorem quia eligendi soluta expedita maxime animi, quos deleniti exercitationem quae impedit recusandae nobis laborum hic? Sed, dolor.
           </p>
@@ -402,14 +138,8 @@
           <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis porro, facere, ipsa id repudiandae illum tenetur nulla vel et molestias fugit.
           </p>
-          <div class="recipe__share">
-            <h3>If you liked this content, Please share!</h3>
-            <amp-social-share type="twitter" width="50" height="50"></amp-social-share>
-            <amp-social-share type="email" width="50" height="50"></amp-social-share>
-            <amp-social-share type="linkedin" width="50" height="50"></amp-social-share>
-            <amp-social-share type="facebook" width="50" height="50"></amp-social-share>
-            <amp-social-share type="whatsapp" width="50" height="50"></amp-social-share>
-          </div>
+          <!-- Go to www.addthis.com/dashboard to customize your tools -->
+          <div class="addthis_inline_share_toolbox"></div>
         </div>
       </section>
       <footer class="recipe__footer">
@@ -418,5 +148,15 @@
         alcohol.Drink Responsibly.
       </footer>
     </main>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./assets/slick/slick.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.recipe_slider').slick();
+      });
+    </script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4d66cdfe77446231"></script>
   </body>
 </html>
