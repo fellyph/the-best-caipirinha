@@ -4,6 +4,7 @@
   --header-color: #fff;
   --cardBg-color: #fff;
   --bodyBg-color: #defaf8;
+  --title-color: #333;
 }
 
 body {
@@ -54,7 +55,7 @@ h5 {
   content: "";
   width: 50px;
   height: 50px;
-  background-image: url("./images/half_lime.svg");
+  background-image: url("./assets/images/half_lime.svg");
   display: inline-block;
   position: absolute;
   top: 50%;
@@ -70,7 +71,7 @@ h5 {
   left: 100%;
 }
 
-/* =========== navigation ========== */
+/* =========== NAVIGATION ========== */
 
 .recipe__navigation {
   position: fixed;
@@ -87,6 +88,7 @@ h5 {
 
 .recipe__navigation__item {
   position: relative;
+  font-family: "Pacifico", cursive;
 }
 
 .recipe__navigation__item a {
@@ -107,19 +109,19 @@ h5 {
   content: "";
   width: 25px;
   height: 25px;
-  background-image: url("./images/full_lime.svg");
+  background-image: url("./assets/images/full_lime.svg");
   display: inline-block;
   position: absolute;
   top: 5px;
   left: 5px;
 }
 
-/* ========== card ============ */
+/* ========== CARD ============ */
 
 .recipe__card {
   background: var(--cardBg-color);
   margin: 1em auto 2em;
-  width: 600px;
+  width: 700px;
   max-width: 100%;
 }
 
@@ -139,13 +141,11 @@ h5 {
   padding: 1em;
 }
 
-.recipe__footer {
-  color: var(--header-color);
-  width: 100%;
+.recipe__card__content h2,
+.recipe__card__content h3 {
   text-align: center;
-  margin-top: 1em;
-  padding: 1em;
-  background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  color: var(--title-color);
+  font-family: "Open Sans", sans-serif;
 }
 
 .recipe__card__step img,
@@ -155,7 +155,42 @@ h5 {
 
 .recipe__card__step {
   text-align: center;
-  margin-bottom: 2.5em;
+}
+
+.recipe__card__carousel {
   padding-bottom: 1em;
   border-bottom: 5px dotted var(--secondary-color);
+  margin-bottom: 2.5em;
+}
+
+.recipe__share {
+  text-align: center;
+}
+
+/* ========== STEPS ========== */
+.recipe__steps__final {
+  width: 700px;
+  height: 100%;
+  max-width: 100%;
+  color: var(--header-color);
+  background: var(--primary-color);
+  font-size: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recipe__steps__final span {
+  vertical-align: middle;
+}
+
+/* ========== FOOTER ============ */
+.recipe__footer {
+  color: var(--header-color);
+  width: 100%;
+  text-align: center;
+  margin-top: 1em;
+  padding: 0.7em;
+  font-size: 12px;
+  background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color)s);
 }
