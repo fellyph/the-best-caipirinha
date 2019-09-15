@@ -4,6 +4,9 @@
   --header-color: #fff;
   --cardBg-color: #fff;
   --bodyBg-color: #defaf8;
+  --spacing-elements: 16px;
+  --lime-size-mobile: 30px;
+  --lime-sizr-desktop: 50px;
 }
 
 body {
@@ -27,9 +30,10 @@ h5 {
 .recipe__header {
   background: var(--primary-color);
   color: var(--header-color);
-  padding: 1em;
+  padding: 1em 0;
   text-align: center;
   margin-bottom: 2em;
+  position: sticky;
 }
 
 .recipe__title,
@@ -40,8 +44,10 @@ h5 {
 
 .recipe__title {
   position: relative;
-  padding: 0 20px;
-  display: inline-block;
+  padding: 0 var(--spacing-elements);
+  display: block;
+  font-size: 1em;
+  margin: 0 var(--spacing-elements);
 }
 
 .recipe__subtitle {
@@ -52,9 +58,10 @@ h5 {
 .recipe__title::after,
 .recipe__title::before {
   content: "";
-  width: 50px;
-  height: 50px;
+  width: var(--lime-size-mobile);
+  height: var(--lime-size-mobile);
   background-image: url("./images/half_lime.svg");
+  background-repeat: no-repeat;
   display: inline-block;
   position: absolute;
   top: 50%;
