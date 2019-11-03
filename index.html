@@ -101,30 +101,26 @@
           margin: 0;
         }
 
-        .recipe__navigation__item a,
-        .recipe__navigation__item button {
+        .recipe__navigation__item {
+          position: relative;
           font-family: "Pacifico", cursive;
-          font-size: 16px;
-          text-align: left;
+        }
+
+        .recipe__navigation__item a {
           margin-bottom: 0.3em;
           background: var(--primary-color);
           color: var(--header-color);
           text-decoration: none;
           padding: 0.3em 0.5em 0.3em 2em;
           display: block;
-          border: none;
-          width: 100%;
-          position: relative;
         }
 
-        .recipe__navigation__item a:hover,
-        .recipe__navigation__item button:hover {
+        .recipe__navigation__item a:hover {
           color: var(--primary-color);
           background: var(--header-color);
         }
 
-        .recipe__navigation__item a::before,
-        .recipe__navigation__item button::before {
+        .recipe__navigation__item a::before {
           content: "";
           width: 25px;
           height: 25px;
@@ -241,9 +237,6 @@
             <ul class="recipe__navigation__submenu">
               <li class="recipe__navigation__item">
                 <a href="#step1">Step 1</a>
-                <button on="tap:step1.show">Show Step 1</button>
-                <button on="tap:step1.hide">Hide Step 1</button>
-                <button on="tap:step1.scrollTo">Scroll To Step 1</button>
               </li>
               <li class="recipe__navigation__item">
                 <a href="#step2">Step 2</a>
@@ -396,13 +389,13 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis porro, facere, ipsa id repudiandae illum tenetur nulla vel et molestias fugit.
               </p>
           </article>
-          <article id="step6">
-              <h3>6. Stir well and enjoy!</h3>
-              <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis porro, facere, ipsa id repudiandae illum tenetur nulla vel et molestias fugit.
-              </p>
-          </article>
 
+          <article id="step6">
+            <h3>6. Stir well and enjoy!</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis porro, facere, ipsa id repudiandae illum tenetur nulla vel et molestias fugit.
+            </p>
+          </article>
           <div class="recipe__share">
             <h3>If you liked this content, Please share!</h3>
             <amp-social-share type="twitter"></amp-social-share>
