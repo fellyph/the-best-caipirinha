@@ -39,7 +39,7 @@
       }
 
       .container {
-        width: 700px;
+        width: 900px;
         max-width: 100%;
         margin: 0 auto;
         box-sizing: border-box;
@@ -63,6 +63,9 @@
       }
 
       .recipe__title {
+        font-size: 24px;
+        width: calc(100% - 150px);
+        margin-left: 50px;
         position: relative;
         padding: 0 20px;
         display: inline-block;
@@ -76,8 +79,8 @@
       .recipe__title::after,
       .recipe__title::before {
         content: "";
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         background-image: url("./assets/images/half_lime.svg");
         display: inline-block;
         position: absolute;
@@ -86,12 +89,12 @@
       }
 
       .recipe__title::before {
-        right: 100%;
+        right: 95%;
         transform: scaleX(-1) translateY(-50%);
       }
 
       .recipe__title::after {
-        left: 100%;
+        left: 95%;
       }
 
       .recipe__menu__btn {
@@ -246,6 +249,27 @@
         font-size: 12px;
         background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
       }
+
+      @media (min-width: 800px) {
+        .recipe__title {
+          font-size: 36px;
+          width: auto;
+        }
+
+        .recipe__title::after,
+        .recipe__title::before {
+          width: 55px;
+          height: 55px;
+        }
+
+        .recipe__title::before {
+          right: 100%;
+        }
+
+        .recipe__title::after {
+          left: 100%;
+        }
+      }
     </style>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <link rel="canonical" href="." />
@@ -302,7 +326,7 @@
           </ul>
         </nav>
       </amp-sidebar>
-      <div class="containder">
+      <div class="container">
         <section class="recipe__about recipe__card" id="about">
           <header class="recipe__card__header">
             <h2 class="recipe__card__title">About</h2>
