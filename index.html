@@ -28,6 +28,7 @@
         background: var(--bodyBg-color);
         padding: 0;
         margin: 0;
+        width: 100%;
       }
 
       h1,
@@ -54,6 +55,8 @@
         text-align: center;
         margin-bottom: 2em;
         position: relative;
+        width: 100%;
+        box-sizing: border-box;
       }
 
       .recipe__title,
@@ -255,6 +258,16 @@
         background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
       }
 
+      /* ================== CUSTOM COMPONENTS ================== */
+
+      .amp-carousel-button {
+        height: 50px;
+        width: 50px;
+        background-color: var(--primary-color);
+      }
+
+      /* ================== MEDIA QUERY ======================== */
+
       @media (min-width: 800px) {
         .recipe__title {
           font-size: 36px;
@@ -285,7 +298,6 @@
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
   </head>
   <body>
-    <main>
       <header id="top" class="recipe__header">
         <h1 class="recipe__title">How to prepare The Best Caipirinha</h1>
         <button class="recipe__menu__btn" on="tap:menu.toggle">
@@ -546,6 +558,5 @@
         Please do not share with anyone under the legal purchase age for
         alcohol.Drink Responsibly.
       </footer>
-    </main>
   </body>
 </html>
