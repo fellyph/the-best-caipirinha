@@ -38,6 +38,13 @@
         font-family: "Pacifico", cursive;
       }
 
+      .container {
+        width: 700px;
+        max-width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+
       /* ========== HEADER ============= */
 
       .recipe__header {
@@ -123,6 +130,7 @@
 
       .recipe__navigation__menu {
         margin: 0;
+        padding: 0.3em;
       }
 
       .recipe__navigation__item a,
@@ -163,8 +171,7 @@
 
       .recipe__card {
         background: var(--cardBg-color);
-        margin: 1em auto 2em;
-        width: 700px;
+        margin: 2em 0.5em;
         max-width: 100%;
       }
 
@@ -295,214 +302,216 @@
           </ul>
         </nav>
       </amp-sidebar>
-      <section class="recipe__about recipe__card" id="about">
-        <header class="recipe__card__header">
-          <h2 class="recipe__card__title">About</h2>
-        </header>
-        <amp-youtube
-          data-videoid="T6OSr4mAcKA"
-          layout="responsive"
-          dock
-          width="480"
-          height="270"
-        >
-          <amp-img
-            width="700"
-            height="526"
-            alt="Brazilian Caipirinha"
+      <div class="containder">
+        <section class="recipe__about recipe__card" id="about">
+          <header class="recipe__card__header">
+            <h2 class="recipe__card__title">About</h2>
+          </header>
+          <amp-youtube
+            data-videoid="T6OSr4mAcKA"
             layout="responsive"
-            placeholder
-            src="./assets/images/caipirinha.jpg"
-          ></amp-img>
-        </amp-youtube>
-        <div class="recipe__card__content">
-          <p>
-            Caipirinha is Brazil's national cocktail, made with cachaça
-            (sugarcane hard liquor), sugar, and lime. Cachaça, also known as
-            caninha, or any one of a multitude of traditional names, is Brazil's
-            most common distilled alcoholic beverage. Although both rum and
-            cachaça are made from sugarcane-derived products, in cachaça the
-            alcohol results from the fermentation of fresh sugarcane juice that
-            is then distilled, while rum is usually made from refinery
-            by-products such as molasses.
-          </p>
-
-          <p>
-            The drink is prepared by mixing the fruit and the sugar together,
-            and adding the liquor. This can be made into a single glass, usually
-            large, that can be shared amongst people, or into a larger jar, from
-            which it is served in individual glasses.
-          </p>
-          <p>source: wikipedia</p>
-        </div>
-      </section>
-      <section class="recipe__ingredients recipe__card" id="ingredients">
-        <header class="recipe__card__header">
-          <h2 class="recipe__card__title">Ingredients</h2>
-        </header>
-
-        <amp-img
-          width="700"
-          height="526"
-          layout="responsive"
-          src="./assets/images/ingredients_caipirinha.webp"
-        >
-          <amp-img
-            width="700"
-            height="526"
-            layout="responsive"
-            fallback
-            src="./assets/images/ingredients_caipirinha.jpg"
-          ></amp-img>
-        </amp-img>
-        <div class="recipe__card__content">
-          <ol>
-            <li>1/2 lime</li>
-            <li>1/2 to 2 teaspoons sugar (to taste)</li>
-            <li>Ice</li>
-            <li>2 ounces​ cachaça</li>
-          </ol>
-        </div>
-      </section>
-      <section class="recipe__steps recipe__card" id="steps">
-        <header class="recipe__card__header">
-          <h2 class="recipe__card__title">Steps to Make It</h2>
-        </header>
-        <div class="recipe__card__content">
-          <amp-carousel
-            class="recipe__card__carousel"
-            width="700"
-            height="526"
-            type="slides"
-            layout="responsive"
+            dock
+            width="480"
+            height="270"
           >
-            <figure class="recipe__card__step">
-              <amp-img
-                width="700"
-                height="526"
-                src="./assets/images/caipirinha_step1.jpg"
-                layout="responsive"
-              ></amp-img>
-              <figcaption></figcaption>
-            </figure>
-            <figure class="recipe__card__step">
-              <amp-img
-                width="700"
-                height="526"
-                src="./assets/images/caipirinha_step2.jpg"
-                layout="responsive"
-              ></amp-img>
-              <figcaption>2. Cut half of a lime into small wedges.</figcaption>
-            </figure>
-            <figure class="recipe__card__step">
-              <amp-img
-                width="700"
-                height="526"
-                src="./assets/images/caipirinha_step3.jpg"
-                layout="responsive"
-              ></amp-img>
-              <figcaption>
-                3. Place the lime and sugar into an old-fashioned glass and
-                muddle well.
-              </figcaption>
-            </figure>
-            <figure class="recipe__card__step" id="step4">
-              <amp-img
-                width="700"
-                height="526"
-                src="./assets/images/caipirinha_step4.jpg"
-                layout="responsive"
-              ></amp-img>
-              <figcaption>4. Add a few ice cubes.</figcaption>
-            </figure>
-            <figure class="recipe__card__step" id="step5">
-              <amp-img
-                width="700"
-                height="526"
-                src="./assets/images/caipirinha_step5.jpg"
-                layout="responsive"
-              ></amp-img>
-              <figcaption>5. Top the drink with cachaça.</figcaption>
-            </figure>
-            <div class="recipe__steps__final">
-              <span>
-                6. Stir well and enjoy!
-              </span>
-            </div>
-          </amp-carousel>
-          <section id="step1">
-            <h3 class="recipe__step__title">1. Gather the ingredients.</h3>
+            <amp-img
+              width="700"
+              height="526"
+              alt="Brazilian Caipirinha"
+              layout="responsive"
+              placeholder
+              src="./assets/images/caipirinha.jpg"
+            ></amp-img>
+          </amp-youtube>
+          <div class="recipe__card__content">
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Perspiciatis explicabo vero, facere, dolorem quia eligendi soluta
-              expedita maxime animi, quos deleniti exercitationem quae impedit
-              recusandae nobis laborum hic? Sed, dolor.
+              Caipirinha is Brazil's national cocktail, made with cachaça
+              (sugarcane hard liquor), sugar, and lime. Cachaça, also known as
+              caninha, or any one of a multitude of traditional names, is Brazil's
+              most common distilled alcoholic beverage. Although both rum and
+              cachaça are made from sugarcane-derived products, in cachaça the
+              alcohol results from the fermentation of fresh sugarcane juice that
+              is then distilled, while rum is usually made from refinery
+              by-products such as molasses.
             </p>
-          </section>
-          <section id="step2">
-            <h3 class="recipe__step__title">
-              2. Cut half of a lime into small wedges.
-            </h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
-              ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis
-              porro, facere, ipsa id repudiandae illum tenetur nulla vel et
-              molestias fugit.
-            </p>
-          </section>
 
-          <section id="step3">
-            <h3 class="recipe__step__title">
-              3. Place the lime and sugar into an old-fashioned glass and muddle
-              well.
-            </h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
-              ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis
-              porro, facere, ipsa id repudiandae illum tenetur nulla vel et
-              molestias fugit.
+              The drink is prepared by mixing the fruit and the sugar together,
+              and adding the liquor. This can be made into a single glass, usually
+              large, that can be shared amongst people, or into a larger jar, from
+              which it is served in individual glasses.
             </p>
-          </section>
-
-          <section id="step4">
-            <h3 class="recipe__step__title">4. Add a few ice cubes.</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
-              ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis
-              porro, facere, ipsa id repudiandae illum tenetur nulla vel et
-              molestias fugit.
-            </p>
-          </section>
-
-          <section id="step5">
-            <h3 class="recipe__step__title">5. Top the drink with cachaça.</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
-              ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis
-              porro, facere, ipsa id repudiandae illum tenetur nulla vel et
-              molestias fugit.
-            </p>
-          </section>
-          <section id="step6">
-            <h3 class="recipe__step__title">6. Stir well and enjoy!</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
-              ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis
-              porro, facere, ipsa id repudiandae illum tenetur nulla vel et
-              molestias fugit.
-            </p>
-          </section>
-
-          <div class="recipe__share">
-            <h3>If you liked this content, Please share!</h3>
-            <amp-social-share type="twitter"></amp-social-share>
-            <amp-social-share type="email"></amp-social-share>
-            <amp-social-share type="linkedin"></amp-social-share>
-            <amp-social-share type="facebook"></amp-social-share>
-            <amp-social-share type="whatsapp"></amp-social-share>
+            <p>source: wikipedia</p>
           </div>
-        </div>
-      </section>
+        </section>
+        <section class="recipe__ingredients recipe__card" id="ingredients">
+          <header class="recipe__card__header">
+            <h2 class="recipe__card__title">Ingredients</h2>
+          </header>
+
+          <amp-img
+            width="700"
+            height="526"
+            layout="responsive"
+            src="./assets/images/ingredients_caipirinha.webp"
+          >
+            <amp-img
+              width="700"
+              height="526"
+              layout="responsive"
+              fallback
+              src="./assets/images/ingredients_caipirinha.jpg"
+            ></amp-img>
+          </amp-img>
+          <div class="recipe__card__content">
+            <ol>
+              <li>1/2 lime</li>
+              <li>1/2 to 2 teaspoons sugar (to taste)</li>
+              <li>Ice</li>
+              <li>2 ounces​ cachaça</li>
+            </ol>
+          </div>
+        </section>
+        <section class="recipe__steps recipe__card" id="steps">
+          <header class="recipe__card__header">
+            <h2 class="recipe__card__title">Steps to Make It</h2>
+          </header>
+          <div class="recipe__card__content">
+            <amp-carousel
+              class="recipe__card__carousel"
+              width="700"
+              height="526"
+              type="slides"
+              layout="responsive"
+            >
+              <figure class="recipe__card__step">
+                <amp-img
+                  width="700"
+                  height="526"
+                  src="./assets/images/caipirinha_step1.jpg"
+                  layout="responsive"
+                ></amp-img>
+                <figcaption></figcaption>
+              </figure>
+              <figure class="recipe__card__step">
+                <amp-img
+                  width="700"
+                  height="526"
+                  src="./assets/images/caipirinha_step2.jpg"
+                  layout="responsive"
+                ></amp-img>
+                <figcaption>2. Cut half of a lime into small wedges.</figcaption>
+              </figure>
+              <figure class="recipe__card__step">
+                <amp-img
+                  width="700"
+                  height="526"
+                  src="./assets/images/caipirinha_step3.jpg"
+                  layout="responsive"
+                ></amp-img>
+                <figcaption>
+                  3. Place the lime and sugar into an old-fashioned glass and
+                  muddle well.
+                </figcaption>
+              </figure>
+              <figure class="recipe__card__step" id="step4">
+                <amp-img
+                  width="700"
+                  height="526"
+                  src="./assets/images/caipirinha_step4.jpg"
+                  layout="responsive"
+                ></amp-img>
+                <figcaption>4. Add a few ice cubes.</figcaption>
+              </figure>
+              <figure class="recipe__card__step" id="step5">
+                <amp-img
+                  width="700"
+                  height="526"
+                  src="./assets/images/caipirinha_step5.jpg"
+                  layout="responsive"
+                ></amp-img>
+                <figcaption>5. Top the drink with cachaça.</figcaption>
+              </figure>
+              <div class="recipe__steps__final">
+                <span>
+                  6. Stir well and enjoy!
+                </span>
+              </div>
+            </amp-carousel>
+            <section id="step1">
+              <h3 class="recipe__step__title">1. Gather the ingredients.</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Perspiciatis explicabo vero, facere, dolorem quia eligendi soluta
+                expedita maxime animi, quos deleniti exercitationem quae impedit
+                recusandae nobis laborum hic? Sed, dolor.
+              </p>
+            </section>
+            <section id="step2">
+              <h3 class="recipe__step__title">
+                2. Cut half of a lime into small wedges.
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
+                ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis
+                porro, facere, ipsa id repudiandae illum tenetur nulla vel et
+                molestias fugit.
+              </p>
+            </section>
+
+            <section id="step3">
+              <h3 class="recipe__step__title">
+                3. Place the lime and sugar into an old-fashioned glass and muddle
+                well.
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
+                ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis
+                porro, facere, ipsa id repudiandae illum tenetur nulla vel et
+                molestias fugit.
+              </p>
+            </section>
+
+            <section id="step4">
+              <h3 class="recipe__step__title">4. Add a few ice cubes.</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
+                ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis
+                porro, facere, ipsa id repudiandae illum tenetur nulla vel et
+                molestias fugit.
+              </p>
+            </section>
+
+            <section id="step5">
+              <h3 class="recipe__step__title">5. Top the drink with cachaça.</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
+                ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis
+                porro, facere, ipsa id repudiandae illum tenetur nulla vel et
+                molestias fugit.
+              </p>
+            </section>
+            <section id="step6">
+              <h3 class="recipe__step__title">6. Stir well and enjoy!</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
+                ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis
+                porro, facere, ipsa id repudiandae illum tenetur nulla vel et
+                molestias fugit.
+              </p>
+            </section>
+
+            <div class="recipe__share">
+              <h3>If you liked this content, Please share!</h3>
+              <amp-social-share type="twitter"></amp-social-share>
+              <amp-social-share type="email"></amp-social-share>
+              <amp-social-share type="linkedin"></amp-social-share>
+              <amp-social-share type="facebook"></amp-social-share>
+              <amp-social-share type="whatsapp"></amp-social-share>
+            </div>
+          </div>
+        </section>
+      </div>
       <footer class="recipe__footer">
         <h3 class="recipe__subtitle">By Fellyph Cintra</h3>
         Please do not share with anyone under the legal purchase age for
