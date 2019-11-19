@@ -242,6 +242,17 @@
         justify-content: center;
       }
 
+      h3.recipe__step__title {
+        background: var(--secondary-color);
+        padding: 0.5em;
+        border-top: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        border-bottom: 3px solid var(--primary-color);
+        color: var(--header-color);
+        text-align: left;
+      }
+
       .recipe__steps__final span {
         vertical-align: middle;
       }
@@ -296,6 +307,7 @@
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
   </head>
   <body>
       <header id="top" class="recipe__header">
@@ -479,69 +491,71 @@
                 </span>
               </div>
             </amp-carousel>
-            <section id="step1">
-              <h3 class="recipe__step__title">1. Gather the ingredients.</h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Perspiciatis explicabo vero, facere, dolorem quia eligendi soluta
-                expedita maxime animi, quos deleniti exercitationem quae impedit
-                recusandae nobis laborum hic? Sed, dolor.
-              </p>
-            </section>
-            <section id="step2">
-              <h3 class="recipe__step__title">
-                2. Cut half of a lime into small wedges.
-              </h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
-                ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis
-                porro, facere, ipsa id repudiandae illum tenetur nulla vel et
-                molestias fugit.
-              </p>
-            </section>
+            <amp-accordion expand-single-section>
+              <section id="step1" expanded>
+                <h3 class="recipe__step__title">1. Gather the ingredients.</h3>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Perspiciatis explicabo vero, facere, dolorem quia eligendi soluta
+                  expedita maxime animi, quos deleniti exercitationem quae impedit
+                  recusandae nobis laborum hic? Sed, dolor.
+                </p>
+              </section>
+              <section id="step2">
+                <h3 class="recipe__step__title">
+                  2. Cut half of a lime into small wedges.
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
+                  ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis
+                  porro, facere, ipsa id repudiandae illum tenetur nulla vel et
+                  molestias fugit.
+                </p>
+              </section>
 
-            <section id="step3">
-              <h3 class="recipe__step__title">
-                3. Place the lime and sugar into an old-fashioned glass and muddle
-                well.
-              </h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
-                ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis
-                porro, facere, ipsa id repudiandae illum tenetur nulla vel et
-                molestias fugit.
-              </p>
-            </section>
+              <section id="step3">
+                <h3 class="recipe__step__title">
+                  3. Place the lime and sugar into an old-fashioned glass and muddle
+                  well.
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
+                  ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis
+                  porro, facere, ipsa id repudiandae illum tenetur nulla vel et
+                  molestias fugit.
+                </p>
+              </section>
 
-            <section id="step4">
-              <h3 class="recipe__step__title">4. Add a few ice cubes.</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
-                ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis
-                porro, facere, ipsa id repudiandae illum tenetur nulla vel et
-                molestias fugit.
-              </p>
-            </section>
+              <section id="step4">
+                <h3 class="recipe__step__title">4. Add a few ice cubes.</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
+                  ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis
+                  porro, facere, ipsa id repudiandae illum tenetur nulla vel et
+                  molestias fugit.
+                </p>
+              </section>
 
-            <section id="step5">
-              <h3 class="recipe__step__title">5. Top the drink with cachaça.</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
-                ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis
-                porro, facere, ipsa id repudiandae illum tenetur nulla vel et
-                molestias fugit.
-              </p>
-            </section>
-            <section id="step6">
-              <h3 class="recipe__step__title">6. Stir well and enjoy!</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
-                ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis
-                porro, facere, ipsa id repudiandae illum tenetur nulla vel et
-                molestias fugit.
-              </p>
-            </section>
+              <section id="step5">
+                <h3 class="recipe__step__title">5. Top the drink with cachaça.</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
+                  ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis
+                  porro, facere, ipsa id repudiandae illum tenetur nulla vel et
+                  molestias fugit.
+                </p>
+              </section>
 
+              <section id="step6">
+                <h3 class="recipe__step__title">6. Stir well and enjoy!</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
+                  ipsam repellat? Animi excepturi nostrum ducimus minus natus nobis
+                  porro, facere, ipsa id repudiandae illum tenetur nulla vel et
+                  molestias fugit.
+                </p>
+              </section>
+            </amp-accordion>
             <div class="recipe__share">
               <h3>If you liked this content, Please share!</h3>
               <amp-social-share type="twitter"></amp-social-share>
