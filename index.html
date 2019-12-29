@@ -46,6 +46,61 @@
         box-sizing: border-box;
       }
 
+      .lightbox {
+        align-items: center;
+        background: rgba(0, 0, 0, 0.8);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        padding: 2em;
+      }
+
+      .lightbox_p {
+        color: #fff;
+        font-size: 1.5em;
+        font-weight: 500;
+      }
+
+      .lightbox_close {
+        position: absolute;
+        right: 32px;
+        top: 32px;
+        width: 32px;
+        height: 32px;
+        opacity: 0.7;
+        text-indent: -999px;
+        overflow: hidden;
+        border: none;
+        background: transparent;
+      }
+
+      .lightbox_close:hover {
+        opacity: 1;
+      }
+
+      .lightbox_close::before,
+      .lightbox_close::after {
+        position: absolute;
+        left: 16px;
+        top: 0;
+        content: ' ';
+        height: 33px;
+        width: 3px;
+        background-color: #fff;
+      }
+
+      .lightbox_close::before {
+        transform: rotate(45deg);
+      }
+
+      .lightbox_close::after {
+        transform: rotate(-45deg);
+      }
+
       /* ========== HEADER ============= */
 
       .recipe__header {
@@ -296,6 +351,7 @@
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
   </head>
   <body>
       <header id="top" class="recipe__header">
@@ -367,7 +423,7 @@
           <div class="recipe__card__content">
             <p>
               Caipirinha is Brazil's national cocktail, made with cachaça
-              (sugarcane hard liquor), sugar, and lime. Cachaça, also known as
+              (<button on="tap:sugarcane-wiki" class="recipe__card__link">sugarcane</button> hard liquor), sugar, and lime. Cachaça, also known as
               caninha, or any one of a multitude of traditional names, is Brazil's
               most common distilled alcoholic beverage. Although both rum and
               cachaça are made from sugarcane-derived products, in cachaça the
@@ -382,6 +438,24 @@
               large, that can be shared amongst people, or into a larger jar, from
               which it is served in individual glasses.
             </p>
+
+            <amp-lightbox id="sugarcane-wiki" layout="nodisplay" animate-in="fly-in-bottom">
+              <div class="lightbox"
+                on="tap:sugarcane-wiki.close"
+                role="button"
+                tabindex="0">
+                <p class="lightbox_p">
+                  Sugarcane, or sugar cane, or simply cane, are several species of tall perennial true grasses of the genus Saccharum,
+                  tribe Andropogoneae, used for sugar production. The plant is two to six metres (six to twenty feet) tall. It has stout,
+                  jointed, fibrous stalks that are rich in sucrose, a simple sugar which accumulates in the stalk internodes. Sugarcane belongs to the grass family Poaceae,
+                  an economically important seed plant family that includes maize, wheat, rice, and sorghum, and many forage crops. It is native to the warm temperate to tropical regions of South Asia,
+                  Southeast Asia, New Guinea, and South America.
+                </p>
+                <p class="lightbox_p">source: wikipedia</p>
+              </div>
+              <button class="lightbox_close" on="tap:sugarcane-wiki.close">close</button>
+            </amp-lightbox>
+
             <p>source: wikipedia</p>
           </div>
         </section>
