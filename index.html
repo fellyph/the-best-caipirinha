@@ -352,6 +352,7 @@
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+    <script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
   </head>
   <body>
       <header id="top" class="recipe__header">
@@ -400,6 +401,7 @@
         </nav>
       </amp-sidebar>
       <div class="container">
+        <amp-image-lightbox id="lightbox-caipirinha" layout="nodisplay"></amp-image-lightbox>
         <section class="recipe__about recipe__card" id="about">
           <header class="recipe__card__header">
             <h2 class="recipe__card__title">About</h2>
@@ -463,21 +465,19 @@
           <header class="recipe__card__header">
             <h2 class="recipe__card__title">Ingredients</h2>
           </header>
-
-          <amp-img
+          <figure>
+            <amp-img
             width="700"
             height="526"
             layout="responsive"
             src="./assets/images/ingredients_caipirinha.webp"
-          >
-            <amp-img
-              width="700"
-              height="526"
-              layout="responsive"
-              fallback
-              src="./assets/images/ingredients_caipirinha.jpg"
-            ></amp-img>
-          </amp-img>
+            on="tap:lightbox-caipirinha"
+            role="button"
+            tabindex="0"
+          ></amp-img>
+            <figcaption>Learn how to prepare the best caipirinha</figcaption>
+          </figure>
+
           <div class="recipe__card__content">
             <ol>
               <li>1/2 lime</li>
@@ -505,6 +505,9 @@
                   height="526"
                   src="./assets/images/caipirinha_step1.jpg"
                   layout="responsive"
+                  on="tap:lightbox-caipirinha"
+                  role="button"
+                  tabindex="0"
                 ></amp-img>
                 <figcaption></figcaption>
               </figure>
