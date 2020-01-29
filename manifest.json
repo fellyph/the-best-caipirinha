@@ -17,5 +17,6 @@
   "background_color": "#00d1c3",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#00d1c3"
+  "theme_color": "#00d1c3",
+  "orientation": "portrait"
  }
