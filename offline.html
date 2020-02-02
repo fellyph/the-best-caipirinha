@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width,minimum-scale=1" />
+    <meta name="description" content="How to prepare the best caipirinha" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js" />
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <meta name="theme-color" content="#00d1c3"/>
+    <link rel="apple-touch-icon" href="./assets/images/capi_icon_192.png">
+    <title>How to prepare The best Caipirinha</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <style amp-custom>
+      :root {
+        --primary-color: #00d1c3;
+        --secondary-color: #fccd69;
+        --header-color: #fff;
+        --cardBg-color: #fff;
+        --bodyBg-color: #defaf8;
+        --title-color: #333;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        font-size: 18px;
+        background: var(--bodyBg-color);
+        padding: 0;
+        margin: 0;
+        width: 100%;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Pacifico", cursive;
+      }
+
+      .container {
+        width: 900px;
+        max-width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+
+      .lightbox {
+        align-items: center;
+        background: rgba(0, 0, 0, 0.8);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        padding: 2em;
+      }
+
+      .lightbox_p {
+        color: #fff;
+        font-size: 1.5em;
+        font-weight: 500;
+      }
+
+      .lightbox_close {
+        position: absolute;
+        right: 32px;
+        top: 32px;
+        width: 32px;
+        height: 32px;
+        opacity: 0.7;
+        text-indent: -999px;
+        overflow: hidden;
+        border: none;
+        background: transparent;
+      }
+
+      .lightbox_close:hover {
+        opacity: 1;
+      }
+
+      .lightbox_close::before,
+      .lightbox_close::after {
+        position: absolute;
+        left: 16px;
+        top: 0;
+        content: ' ';
+        height: 33px;
+        width: 3px;
+        background-color: #fff;
+      }
+
+      .lightbox_close::before {
+        transform: rotate(45deg);
+      }
+
+      .lightbox_close::after {
+        transform: rotate(-45deg);
+      }
+
+      /* ========== HEADER ============= */
+
+      .recipe__header {
+        background: var(--primary-color);
+        color: var(--header-color);
+        padding: 1em;
+        text-align: center;
+        margin-bottom: 2em;
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .recipe__title,
+      .recipe__subtitle {
+        margin-top: 0;
+        margin-bottom: 0.4em;
+      }
+
+      .recipe__title {
+        font-size: 24px;
+        width: calc(100% - 150px);
+        margin-left: 50px;
+        position: relative;
+        padding: 0 20px;
+        display: inline-block;
+      }
+
+      .recipe__subtitle {
+        font-family: "Open Sans", sans-serif;
+        margin-top: 0;
+      }
+
+      .recipe__title::after,
+      .recipe__title::before {
+        content: "";
+        width: 40px;
+        height: 40px;
+        background-image: url("./assets/images/half_lime.svg");
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .recipe__title::before {
+        right: 95%;
+        transform: scaleX(-1) translateY(-50%);
+      }
+
+      .recipe__title::after {
+        left: 95%;
+      }
+
+      .recipe__menu__btn {
+        width: 40px;
+        height: 40px;
+        padding: 0.5em;
+        display: inline-block;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent;
+        border: none;
+      }
+
+      .recipe__menu__btn svg {
+        max-width: 100%;
+        max-height: 100%;
+        fill: var(--header-color);
+      }
+
+      .recipe__menu__btn:hover {
+        background-color: var(--header-color);
+      }
+
+      .recipe__menu__btn:hover svg {
+        fill: var(--primary-color);
+      }
+
+      /* =========== NAVIGATION ========== */
+
+      .recipe__navigation__menu,
+      .recipe__navigation__submenu {
+        list-style: none;
+      }
+
+      .recipe__navigation__menu {
+        margin: 0;
+        padding: 0.3em;
+      }
+
+      .recipe__navigation__submenu {
+        padding: 0;
+        margin-left: 0.3em;
+      }
+
+      .recipe__navigation__item a,
+      .recipe__navigation__item button {
+        font-family: "Pacifico", cursive;
+        font-size: 16px;
+        text-align: left;
+        margin-bottom: 0.3em;
+        background: var(--primary-color);
+        color: var(--header-color);
+        text-decoration: none;
+        padding: 0.3em 0.5em 0.3em 2em;
+        display: block;
+        border: none;
+        width: 100%;
+        position: relative;
+      }
+
+      .recipe__navigation__item a:hover,
+      .recipe__navigation__item button:hover {
+        color: var(--primary-color);
+        background: var(--header-color);
+      }
+
+      .recipe__navigation__item a::before,
+      .recipe__navigation__item button::before {
+        content: "";
+        width: 25px;
+        height: 25px;
+        background-image: url("./assets/images/full_lime.svg");
+        display: inline-block;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+      }
+
+      /* ========== CARD ============ */
+
+      .recipe__card {
+        background: var(--cardBg-color);
+        margin: 2em 0.5em;
+        max-width: 100%;
+      }
+
+      .recipe__card__header {
+        background: var(--primary-color);
+        color: var(--header-color);
+        border-bottom: 10px solid var(--secondary-color);
+        padding: 0.3em;
+        text-align: center;
+      }
+
+      .recipe__card__title {
+        margin: 0;
+      }
+
+      .recipe__card__content {
+        padding: 1em;
+      }
+
+      .recipe__card__content h2,
+      .recipe__card__content h3 {
+        text-align: center;
+        color: var(--title-color);
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .recipe__card__step img,
+      .recipe__thumb img {
+        max-width: 100%;
+      }
+
+      .recipe__card__step {
+        text-align: center;
+      }
+
+      .recipe__card__carousel {
+        padding-bottom: 1em;
+        border-bottom: 5px dotted var(--secondary-color);
+        margin-bottom: 2.5em;
+      }
+
+      .recipe__share {
+        text-align: center;
+      }
+
+      /* ========== STEPS ========== */
+
+      .recipe__steps__final {
+        width: 700px;
+        height: 100%;
+        max-width: 100%;
+        color: var(--header-color);
+        background: var(--primary-color);
+        font-size: 3em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .recipe__steps__final span {
+        vertical-align: middle;
+      }
+
+      /* ========== FOOTER ============ */
+
+      .recipe__footer {
+        color: var(--header-color);
+        width: 100%;
+        text-align: center;
+        margin-top: 1em;
+        padding: 0.7em;
+        font-size: 12px;
+        background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+      }
+
+      /* ================== CUSTOM COMPONENTS ================== */
+
+      .amp-carousel-button {
+        height: 50px;
+        width: 50px;
+        background-color: var(--primary-color);
+      }
+
+      /* ================== MEDIA QUERY ======================== */
+
+      @media (min-width: 800px) {
+        .recipe__title {
+          font-size: 36px;
+          width: auto;
+        }
+
+        .recipe__title::after,
+        .recipe__title::before {
+          width: 55px;
+          height: 55px;
+        }
+
+        .recipe__title::before {
+          right: 100%;
+        }
+
+        .recipe__title::after {
+          left: 100%;
+        }
+      }
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="canonical" href="." />
+
+    <link rel="manifest"href="/manifest.json">
+  </head>
+  <body>
+      <header id="top" class="recipe__header">
+        <h1 class="recipe__title">How to prepare The Best Caipirinha</h1>
+      </header>
+      <div class="container">
+        <section class="recipe__about recipe__card" id="about">
+          <header class="recipe__card__header">
+            <h2 class="recipe__card__title">Sorry you are offline, please come back later...</h2>
+          </header>
+          <amp-img
+            width="700"
+            height="526"
+            alt="Brazilian Caipirinha"
+            layout="responsive"
+            src="./assets/images/caipirinha.jpg"
+          ></amp-img>
+          <div class="recipe__card__content">
+            <p>
+              You can keep read the recipe on the home page
+            </p>
+          </div>
+        </section>
+      </div>
+      <footer class="recipe__footer">
+        <h3 class="recipe__subtitle">By Fellyph Cintra</h3>
+        Please do not share with anyone under the legal purchase age for
+        alcohol.Drink Responsibly.
+      </footer>
+  </body>
+</html>
