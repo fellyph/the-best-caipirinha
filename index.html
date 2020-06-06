@@ -174,9 +174,10 @@
       /* ========== HEADER ============= */
 
       .recipe__header {
-        background: var(--primary-color);
+        background-color: var(--primary-color);
+        background-image: url('./assets/images/background-header.svg');
         color: var(--header-color);
-        padding: 1em;
+        padding: 0.5em;
         text-align: center;
         margin-bottom: 2em;
         position: relative;
@@ -192,37 +193,16 @@
 
       .recipe__title {
         font-size: 24px;
-        width: calc(100% - 150px);
         margin-left: 50px;
         position: relative;
-        padding: 0 20px;
+        padding: 0 1em;
         display: inline-block;
+        text-shadow: 1px 1px 1px #333;
       }
 
       .recipe__subtitle {
         font-family: "Open Sans", sans-serif;
         margin-top: 0;
-      }
-
-      .recipe__title::after,
-      .recipe__title::before {
-        content: "";
-        width: 40px;
-        height: 40px;
-        background-image: url("./assets/images/half_lime.svg");
-        display: inline-block;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      .recipe__title::before {
-        right: 95%;
-        transform: scaleX(-1) translateY(-50%);
-      }
-
-      .recipe__title::after {
-        left: 95%;
       }
 
       .recipe__menu__btn {
@@ -236,20 +216,21 @@
         transform: translateY(-50%);
         background: transparent;
         border: none;
+        background-color: var(--header-color);
       }
 
       .recipe__menu__btn svg {
         max-width: 100%;
         max-height: 100%;
-        fill: var(--header-color);
+        fill: var(--primary-color);
       }
 
       .recipe__menu__btn:hover {
-        background-color: var(--header-color);
+        background-color: var(--secondary-color);
       }
 
       .recipe__menu__btn:hover svg {
-        fill: var(--primary-color);
+        fill: var(--header-color);
       }
 
       /* =========== NAVIGATION ========== */
