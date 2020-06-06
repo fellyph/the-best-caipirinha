@@ -1,0 +1,22 @@
+{
+  "short_name": "Best Caipirinha",
+  "name": "How to prepare the best caipirinha",
+  "icons": [
+    {
+      "src": "./assets/images/capi_icon_192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./assets/images/capi_icon_512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#00d1c3",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#00d1c3",
+  "orientation": "portrait"
+ }
